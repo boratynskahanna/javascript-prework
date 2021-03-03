@@ -8,9 +8,9 @@ let computerMove = 'nieznany ruch';
 
 if(randomNumber == 1){
     computerMove = 'kamień';
-}   else if (randomNumber == 2) {
+}   else if(randomNumber == 2) {
         computerMove = 'papier';
-}   else if (randomNumber == 3) {
+}   else if(randomNumber == 3) {
         computerMove = 'nożyce';
 }
 
@@ -33,3 +33,19 @@ if(playerInput == '1'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+// Wynik gry
+
+if(computerMove == 'kamień' && playerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+}   else if(computerMove == 'nożyce' && playerMove == 'kamień'){
+    printMessage('Ty wygrywasz!');
+}   else if(computerMove == 'papier' && playerMove == 'nożyce'){
+    printMessage('Ty wygrywasz!');
+}   else if(computerMove == playerMove){
+    printMessage('Remis!');
+}   else if(playerMove == 'nieznany ruch'){
+    printMessage('Gracz wpisał błędny numer!');
+}   else {
+    printMessage('Komputer wygrywa!');
+}
