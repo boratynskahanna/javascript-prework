@@ -33,7 +33,6 @@ const getMoveName = function(argMoveId) {
 }
 
 // Display Result Function
-
 const displayResult = function(argComputerMove, argPlayerMove) {
     printMessage(`Zagrałem ${argComputerMove}, a Ty ${argPlayerMove}`);
     if (argComputerMove === 'kamień' && argPlayerMove === 'papier') {
@@ -73,23 +72,3 @@ buttonPaper.addEventListener('click', function() {
 buttonScissors.addEventListener('click', function() {
     playGame('nożyce');
 });
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Kamień, papier, nożyce</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<div class="container">
-		<div id="buttons"></div>
-		<button id="play-rock">KAMIEŃ</button>
-		<button id="play-paper">PAPIER</button>
-		<button id="play-scissors">NOŻYCE</button>
-		<div id="messages"></div>
-		<div id="result">Computer: 0, Player: 0</div>
-	</div>
-	<script src="js/functions.js"></script>
-	<script src="js/script.js"></script>
-</body>
-</html>
