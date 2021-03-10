@@ -1,3 +1,4 @@
+{
 const buttonRock = document.getElementById('play-rock');
 const buttonPaper = document.getElementById('play-paper');
 const buttonScissors = document.getElementById('play-scissors');
@@ -18,7 +19,6 @@ const playGame = function(playerMove){
     displayResult(computerMove, playerMove);
 }
 
-// Move Function
 const getMoveName = function(argMoveId) {
     if (argMoveId === 1) {
         return 'kamień';
@@ -32,7 +32,6 @@ const getMoveName = function(argMoveId) {
     }
 }
 
-// Display Result Function
 const displayResult = function(argComputerMove, argPlayerMove) {
     printMessage(`Zagrałem ${argComputerMove}, a Ty ${argPlayerMove}`);
     if (argComputerMove === 'kamień' && argPlayerMove === 'papier') {
@@ -72,3 +71,6 @@ buttonPaper.addEventListener('click', function() {
 buttonScissors.addEventListener('click', function() {
     playGame('nożyce');
 });
+
+}
+
